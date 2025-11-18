@@ -13,8 +13,11 @@
 body {
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content:center ;
     align-items: center;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
 }
 
 header {
@@ -22,7 +25,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 2rem;
+    padding: 2em;
     background: url('./assets/worldmap.png') no-repeat center/cover;
     color:white;
 }
@@ -43,7 +46,60 @@ header p {
     font-size: 0.6em;
     margin:0;
     padding:0;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
+}
+
+#translate-section {
+    border: 2.5px solid black;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-top: 1em;
+}
+
+.input {
+    text-align: center;
+    color:#035A9D;
+    padding: 0.8em;
+}
+
+textarea {
+  resize: none;
+  padding: 0.8em;
+  font-weight: bolder;
+}
+
+.radio-input {
+    display: flex;
+    gap:0.2rem;
+    padding: 0.2em;
+    align-items: baseline;
+}
+
+.radio-input img {
+    height: 15px;
+    width: 20px;
+    border: 1px solid black;
+    align-self: anchor-center;
+}
+
+.btn-translate {
+    display: flex;
+}
+
+.output {
+    display: none;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 1.2rem;
+  font-weight: bolder;
+  background-color: #035A9D;
+  cursor: pointer;
+  color:#fff;
+  width: 100%;
+  margin-top: 1rem;
+
 }
 
