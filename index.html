@@ -43,6 +43,41 @@
         </div>
     </header>
 
+    <main>
+        <section id="translate-section">
+            <div>
+                <p class="input">Text to translate 👇</p>
+                <textarea name="lang-input" id="lang-input" rows="5" cols="33"></textarea>
+            </div>
+            <div class="languages">
+                <p class="input">Select language 👇</p>
+
+                <label class="radio-input">
+                    <input type="radio" id="french" name="languages" value="french" />
+                    French
+                    <img src="./assets/fr-flag.png" alt="France flag">
+                </label>
+                <label class="radio-input">
+                    <input type="radio" id="spanish" name="languages" value="spanish" checked />
+                    Spanish
+                    <img src="./assets/sp-flag.png" alt="Spain flag">
+                </label>
+
+                <label class="radio-input">
+                    <input type="radio" id="japanese" name="languages" value="japanese" />
+                    Japanese
+                    <img src="./assets/jpn-flag.png" alt="Japan flag">
+                </label>
+            </div>
+            <div class="output">
+                <p class="input">Your translation 👇</p>
+                <textarea name="lang-output" id="lang-output" rows="5" cols="35"></textarea>
+            </div>
+            <button>Translate</button>
+        </section>
+
+    </main>
+
     <script src="index.js" type="module"></script>
 </body>
 
