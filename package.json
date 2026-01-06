@@ -1,11 +1,15 @@
 {
-  "name": "polyglot",
+  "name": "pollyglot",
   "version": "1.0.0",
   "description": "Language Translation in Spanish, French and Japanase using OpenAI API",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hennasingh/PollyGlot.git"
   },
   "keywords": [],
   "author": "Henna Singh",
