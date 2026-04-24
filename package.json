@@ -2,11 +2,10 @@
   "name": "pollyglot",
   "version": "1.0.0",
   "description": "Language Translation in Spanish, French and Japanase using OpenAI API",
-  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "vercel dev",
+    "deploy": "vercel"
   },
   "repository": {
     "type": "git",
@@ -16,12 +15,8 @@
   "author": "Henna Singh",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1",
     "openai": "^6.10.0"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.11"
-  }
+  "devDependencies": {}
 }

@@ -1,17 +1,28 @@
 import 'dotenv/config'
 import OpenAI from 'openai'
-import express from 'express'
-import cors from 'cors'
-
-const app = express()
-app.use(cors())
-app.use(express.json())
 
 const client = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 })
 
-app.post('/api/translate', async (req, res) => {
+export default async function handler(req, res) {
+    // Enable CORS
+    res.setHeader('Access-Control-Allow-Credentials', 'true')
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
+    res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version')
+
+    // Handle preflight CORS requests
+    if (req.method === 'OPTIONS') {
+        res.status(200).end()
+        return
+    }
+
+    // Only allow POST requests
+    if (req.method !== 'POST') {
+        return res.status(405).json({ error: 'Method not allowed' })
+    }
+
     try {
         const { language, text } = req.body
 
@@ -43,9 +54,4 @@ app.post('/api/translate', async (req, res) => {
         console.error('Translation error:', error)
         return res.status(500).json({ error: 'Unable to translate at this time.' })
     }
-})
-
-const PORT = process.env.PORT || 3000
-app.listen(PORT, () => {
-    console.log(`API server listening on port ${PORT}`)
-})
+}
