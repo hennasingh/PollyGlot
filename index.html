@@ -16,7 +16,7 @@
     <meta property="og:title" content="PollyGlot, language translation">
     <meta property="og:description"
         content="PollyGlot. Language translation in Spanish, French and Japanese. Languages, Spain, France, Japan, Travel and Speak">
-    <meta property="og:url" content="https://hennasingh.github.io/Potterville/">
+    <meta property="og:url" content="https://pollyglot-lyart.vercel.app/">
     <meta property="og:site_name" content="PollyGlot, Perfect Translation Everytime">
     <meta name="author" content="Henna Singh">
 
@@ -70,14 +70,22 @@
                     <img src="./assets/jpn-flag.png" alt="Japan flag">
                 </label>
             </div>
-            <div class="output">
+            <button id="btn-translate">Translate</button>
+        </section>
+        <section id="output-section">
+            <div>
+                <p class="input">Original text 👇</p>
+                <textarea name="lang-output" id="lang-output" rows="5" cols="35"></textarea>
+            </div>
+            <div>
                 <p class="input">Your translation 👇</p>
                 <textarea name="lang-output" id="lang-output" rows="5" cols="35"></textarea>
             </div>
-            <button id="btn-translate">Translate</button>
+            <button id="btn-start-over">Start Over</button>
         </section>
 
     </main>
 
     <script src="index.js" type="module"></script>
+
 </html>

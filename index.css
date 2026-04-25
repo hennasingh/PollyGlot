@@ -49,7 +49,7 @@ header p {
     font-weight: 600;
 }
 
-#translate-section {
+#translate-section, #output-section {
     border: 2.5px solid black;
     border-radius: 6px;
     padding: 1rem;
@@ -84,10 +84,6 @@ textarea {
 
 .btn-translate {
     display: flex;
-}
-
-.output {
-    display: none;
 }
 
 button {
