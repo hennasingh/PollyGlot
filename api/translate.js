@@ -32,8 +32,8 @@ export default async function handler(req, res) {
 
         const messages = [
             {
-                role: 'developer',
-                content: "You are a language guru in French, Japanese and Spanish. Given user's input in english, translate the text in given choice and return a single sentence translation."
+                role: 'system',
+                content: "You are an expert in French, Japanese and Spanish languages. You will be provided a text in english language, translate the text in the given choice and return the sentence translation."
             },
             {
                 role: 'user',
@@ -41,13 +41,13 @@ export default async function handler(req, res) {
             }
         ]
 
-        const response = await client.responses.create({
+        const response = await client.chat.completions.create({
             model: 'gpt-5-nano',
-            input: messages
+            messages,
         })
 
         console.log(response)
-        const translation = response?.output_text ?? ''
+        const translation = response.choices[0].message.content
 
         return res.json({ translation })
     } catch (error) {
