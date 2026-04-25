@@ -46,7 +46,6 @@ export default async function handler(req, res) {
             messages,
         })
 
-        console.log(response)
         const translation = response.choices[0].message.content
 
         return res.json({ translation })
