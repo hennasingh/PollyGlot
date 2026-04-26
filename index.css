@@ -11,13 +11,14 @@
 }
 
 body {
-    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content:center ;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
+    background: url('./assets/cultureBackground.png') no-repeat center/cover;
+    min-height: 100vh;
 }
 
 header {
@@ -100,5 +101,24 @@ button {
 
 #output-section {
     display: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+button.translating {
+    animation: pulse 1.5s infinite;
 }
 

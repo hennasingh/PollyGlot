@@ -9,7 +9,17 @@ async function handleClick() {
     const language = document.querySelector('input[name="languages"]:checked').value;
     const textInput = textAreaInput.value
 
-   await sendServerRequest(language, textInput)
+    btnTranslate.textContent = "Translating... ◔";
+    btnTranslate.disabled = true;
+    btnTranslate.classList.add("translating");
+
+    try {
+        await sendServerRequest(language, textInput);
+    } finally {
+        btnTranslate.textContent = "Translate";
+        btnTranslate.disabled = false;
+        btnTranslate.classList.remove("translating");
+    }
 }
 
 btnTranslate.addEventListener("click", handleClick)
@@ -38,7 +48,6 @@ async function sendServerRequest(language, inputText) {
         renderUI(translation)
     } catch (error) {
         console.error(error)
-        
         textAreaOutput.value = 'Unable to translate right now.'
     }
 }
