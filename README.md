@@ -21,7 +21,8 @@ https://github.com/user-attachments/assets/cc5539d9-3d8c-48fd-8016-3c7b89fae776
 <br>
 
 ### Credits
-Scrimba learning platform
+- Scrimba learning platform
 You can use [my affiliate code](https://scrimba.com/henna_ai_eng) to get discount on subscription
+- Gemini Nanobanana for watercolor background
 
 
